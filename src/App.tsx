@@ -2,7 +2,9 @@ import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Header from 'components/header/Header';
+
 import Home from 'pages/Home';
+import Cuisine from 'pages/Cuisine';
 
 const App: FC = () => {
     return (
@@ -10,10 +12,7 @@ const App: FC = () => {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/cuisine/italian" element={<Home />} />
-                <Route path="/cuisine/japanese" element={<Home />} />
-                <Route path="/cuisine/chinese" element={<Home />} />
-                <Route path="/cuisine/france" element={<Home />} />
+                <Route path="/cuisine/:cuisineType" element={<Cuisine />} />
             </Routes>
         </div>
     );
