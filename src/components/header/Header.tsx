@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import chefIcon from 'assets/chef.png';
-import searchIcon from 'assets/search.png';
 
 import styles from './Header.module.css';
 
@@ -10,25 +11,21 @@ const Header: FC = () => {
         <header className={styles.header}>
             <div className="container">
                 <div className={styles.header_wrap}>
-                    <a href="#">
+                    <Link to="/">
                         <img src={chefIcon} alt="logo" />
-                    </a>
-                    <div className={styles.input_wrap}>
-                        <img src={searchIcon} alt="search" />
-                        <input placeholder="Enter a dish name" />
-                    </div>
+                    </Link>
                     <ul className={styles.category_list}>
                         <li>
-                            <a>Italian</a>
+                            <Link to={'/cuisine/italian'}>Italian</Link>
                         </li>
                         <li>
-                            <a>Japanese</a>
+                            <Link to={'/cuisine/japanese'}>Japanese</Link>
                         </li>
                         <li>
-                            <a>Chinese</a>
+                            <Link to={'/cuisine/chinese'}>Chinese</Link>
                         </li>
                         <li>
-                            <a>France</a>
+                            <Link to={'/cuisine/france'}>France</Link>
                         </li>
                     </ul>
                 </div>
