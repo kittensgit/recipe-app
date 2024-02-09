@@ -16,7 +16,7 @@ const Home: FC = () => {
             {isLoading ? (
                 <div>Loading...</div>
             ) : hasDataAndNoError ? (
-                <RecipeCards title="Popular" recipes={data.recipes} />
+                <RecipeCards title="Most popular" recipes={data.recipes} />
             ) : (
                 <div>Occured error</div>
             )}

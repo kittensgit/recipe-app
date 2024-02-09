@@ -1,5 +1,5 @@
 .header {
-    background-color: #d4e7c5;
+    background-color: var(--calm-light);
 }
 
 .header_wrap {
@@ -22,5 +22,5 @@
 
 .category_list li a:hover {
     cursor: pointer;
-    color: #609966;
+    color: var(--middle);
 }

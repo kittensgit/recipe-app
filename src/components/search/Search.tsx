@@ -13,14 +13,11 @@ const Search: FC = () => {
 
     return (
         <div className={styles.search}>
-            <div className={styles.input_wrap}>
-                <img src={searchIcon} alt="search" />
-                <input
-                    value={search}
-                    onChange={handleChange}
-                    placeholder="Enter a dish name"
-                />
-            </div>
+            <input
+                value={search}
+                onChange={handleChange}
+                placeholder="Enter a dish name"
+            />
         </div>
     );
 };

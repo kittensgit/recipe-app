@@ -101,9 +101,20 @@ a:focus {
     box-sizing: border-box;
 }
 
+/* colors vars */
+
+:root {
+    --most-light: #e1f0da;
+    --calm-light: #d4e7c5;
+    --medium-light: #99bc85;
+    --pre-middle: #bfd8af;
+    --middle: #609966;
+    --dark: #40513b;
+}
+
 body {
-    background-color: #e1f0da;
-    color: #40513b;
+    background-color: var(--most-light);
+    color: var(--dark);
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;

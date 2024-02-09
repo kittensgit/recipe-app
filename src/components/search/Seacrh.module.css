@@ -3,22 +3,10 @@
     margin-top: 20px;
 }
 
-.input_wrap {
-    position: relative;
-    display: inline-block;
-}
-
-.input_wrap img {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 input {
     min-width: 400px;
-    background-color: #bfd8af;
-    border: 2px solid #99bc85;
+    background-color: var(--pre-middle);
+    border: 2px solid var(--medium-light);
     color: #294b29;
     font-weight: 600;
     padding: 10px 45px 10px 25px;
