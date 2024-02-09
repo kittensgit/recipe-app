@@ -1,16 +1,25 @@
 import { FC } from 'react';
 
 import Search from 'components/search/Search';
-import MealCards from 'components/mealCards/MealCards';
+import RecipeCards from 'components/recipeCards/RecipeCards';
 
 import { useGetPopularQuery } from 'services/FoodService';
 
 const Home: FC = () => {
-    const { data } = useGetPopularQuery('');
+    const { data, isLoading, isError } = useGetPopularQuery();
+
+    const hasDataAndNoError = data && !isError;
+
     return (
         <div className="container">
             <Search />
-            <MealCards title="Popular" />
+            {isLoading ? (
+                <div>Loading...</div>
+            ) : hasDataAndNoError ? (
+                <RecipeCards title="Popular" recipes={data.recipes} />
+            ) : (
+                <div>Occured error</div>
+            )}
         </div>
     );
 };
