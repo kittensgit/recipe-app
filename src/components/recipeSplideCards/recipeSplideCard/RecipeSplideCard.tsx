@@ -1,17 +1,17 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-
 import { IRecipe } from 'types/receipe/receipe';
 
-import styles from './RecipeCard.module.css';
+import styles from './RecipeSplideCard.module.css';
 
-interface RecipeCardProps {
+interface RecipeSplideCardProps {
     recipe: IRecipe;
 }
 
-const RecipeCard: FC<RecipeCardProps> = ({ recipe }) => {
+const RecipeSplideCard: FC<RecipeSplideCardProps> = ({ recipe }) => {
     return (
         <div className={styles.card}>
+            {recipe.image && <img src={recipe.image} alt={recipe.title} />}
             <Link to={`/instruction/${recipe.id}`}>
                 <span className={styles.caption}>{recipe.title}</span>
             </Link>
@@ -19,4 +19,4 @@ const RecipeCard: FC<RecipeCardProps> = ({ recipe }) => {
     );
 };
 
-export default RecipeCard;
+export default RecipeSplideCard;

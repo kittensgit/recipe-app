@@ -19,6 +19,10 @@ export const foodApi = createApi({
             query: (recipeId) =>
                 `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
+        getRecipesByIngredients: builder.query<IRecipe[], string>({
+            query: (ingredient) =>
+                `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient}&number=10&apiKey=${process.env.REACT_APP_API_KEY}`,
+        }),
     }),
 });
 
@@ -26,4 +30,5 @@ export const {
     useGetPopularQuery,
     useGetPopularByTagQuery,
     useGetRecipeInfoQuery,
+    useGetRecipesByIngredientsQuery,
 } = foodApi;

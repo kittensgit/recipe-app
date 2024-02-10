@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import { IRecipe } from 'types/receipe/receipe';
 import { getUniqueIngredients } from 'helpers/getUniqueIngredients';
@@ -30,7 +31,13 @@ const RecipeInfo: FC<RecipeInfoProps> = ({ recipeInstruction }) => {
                 <div className={styles.instruction}>
                     <ul className={styles.name_list}>
                         {uniqueNameIngredients.map((ingredientName) => (
-                            <li key={ingredientName}>{ingredientName}</li>
+                            <li key={ingredientName}>
+                                <Link
+                                    to={`/recipes/findByIngredients/${ingredientName}`}
+                                >
+                                    {ingredientName}
+                                </Link>
+                            </li>
                         ))}
                     </ul>
                     <div>

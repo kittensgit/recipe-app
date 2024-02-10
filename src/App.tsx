@@ -6,6 +6,7 @@ import Header from 'components/header/Header';
 import Home from 'pages/Home';
 import Cuisine from 'pages/Cuisine';
 import RecipeInstruction from 'pages/RecipeInstruction';
+import RecipesByIngredient from 'pages/RecipesByIngredient';
 
 const App: FC = () => {
     return (
@@ -17,6 +18,10 @@ const App: FC = () => {
                 <Route
                     path="/instruction/:recipeId"
                     element={<RecipeInstruction />}
+                />
+                <Route
+                    path="/recipes/findByIngredients/:ingredient"
+                    element={<RecipesByIngredient />}
                 />
             </Routes>
         </div>

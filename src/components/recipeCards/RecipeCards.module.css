@@ -1,11 +1,4 @@
-.wrapper {
+.cards {
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.title {
-    font-weight: 800;
-    font-size: 28px;
-    padding-bottom: 20px;
+    flex-wrap: wrap;
 }

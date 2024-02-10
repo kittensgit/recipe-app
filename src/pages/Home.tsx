@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import Search from 'components/search/Search';
-import RecipeCards from 'components/recipeCards/RecipeCards';
+import RecipeSplideCards from 'components/recipeSplideCards/RecipeSplideCards';
 
 import {
     useGetPopularByTagQuery,
@@ -28,17 +28,17 @@ const Home: FC = () => {
                 <div>Loading...</div>
             ) : hasDataAndNoError ? (
                 <>
-                    <RecipeCards
+                    <RecipeSplideCards
                         title="Most popular"
                         recipes={popularRecipes.data.recipes}
                         countPage={3}
                     />
-                    <RecipeCards
+                    <RecipeSplideCards
                         title="Dessert"
                         recipes={dessertRecipes.data.recipes}
                         countPage={4}
                     />
-                    <RecipeCards
+                    <RecipeSplideCards
                         title="Vegetarian"
                         recipes={veggyRecipes.data.recipes}
                         countPage={4}
