@@ -44,4 +44,9 @@ img {
     z-index: 3;
     color: var(--most-light);
     padding: 15px;
+    transition: color 0.3s ease-in;
+}
+
+.caption:hover {
+    color: var(--calm-light);
 }

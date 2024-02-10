@@ -11,7 +11,7 @@ const RecipeCard: FC<RecipeCardProps> = ({ recipe }) => {
     return (
         <div className={styles.card}>
             {recipe.image && <img src={recipe.image} alt={recipe.title} />}
-            <Link to={`/istruction/${recipe.id}`}>
+            <Link to={`/instruction/${recipe.id}`}>
                 <span className={styles.caption}>{recipe.title}</span>
             </Link>
         </div>

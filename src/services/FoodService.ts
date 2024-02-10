@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IRecipeApi } from 'types/receipe/receipe';
+import { IRecipe, IRecipeApi } from 'types/receipe/receipe';
 
 export const foodApi = createApi({
     reducerPath: 'foodApi',
@@ -15,7 +15,15 @@ export const foodApi = createApi({
             query: (tagName) =>
                 `/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&include-tags=${tagName}`,
         }),
+        getRecipeInfo: builder.query<IRecipe, string>({
+            query: (recipeId) =>
+                `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_API_KEY}`,
+        }),
     }),
 });
 
-export const { useGetPopularQuery, useGetPopularByTagQuery } = foodApi;
+export const {
+    useGetPopularQuery,
+    useGetPopularByTagQuery,
+    useGetRecipeInfoQuery,
+} = foodApi;
