@@ -11,7 +11,11 @@ export const foodApi = createApi({
             query: () =>
                 `/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`,
         }),
+        getPopularByTag: builder.query<IRecipeApi, string>({
+            query: (tagName) =>
+                `/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&include-tags=${tagName}`,
+        }),
     }),
 });
 
-export const { useGetPopularQuery } = foodApi;
+export const { useGetPopularQuery, useGetPopularByTagQuery } = foodApi;
