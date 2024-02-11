@@ -7,11 +7,7 @@
 }
 
 .title {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 32px;
     padding: 20px;
-}
-
-.title span {
-    font-weight: 800;
 }

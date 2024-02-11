@@ -20,3 +20,7 @@ export interface IRecipe {
 export interface IRecipeApi {
     recipes: IRecipe[];
 }
+
+export interface ICuisineApi {
+    results: IRecipe[];
+}

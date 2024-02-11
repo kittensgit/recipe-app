@@ -16,16 +16,16 @@ const Header: FC = () => {
                     </Link>
                     <ul className={styles.category_list}>
                         <li>
-                            <Link to={'/cuisine/italian'}>Italian</Link>
+                            <Link to={'/cuisine/chinese'}>Chinese</Link>
                         </li>
                         <li>
                             <Link to={'/cuisine/japanese'}>Japanese</Link>
                         </li>
                         <li>
-                            <Link to={'/cuisine/chinese'}>Chinese</Link>
+                            <Link to={'/cuisine/korean'}>Korean</Link>
                         </li>
                         <li>
-                            <Link to={'/cuisine/france'}>France</Link>
+                            <Link to={'/cuisine/mexican'}>Mexican</Link>
                         </li>
                     </ul>
                 </div>
