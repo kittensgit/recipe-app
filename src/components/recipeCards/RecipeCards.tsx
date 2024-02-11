@@ -11,10 +11,15 @@ interface RecipeCardsProps {
 
 const RecipeCards: FC<RecipeCardsProps> = ({ recipes, title }) => {
     return (
-        <div className={styles.cards}>
-            {recipes.map((recipe) => (
-                <RecipeCard key={recipe.id} recipe={recipe} />
-            ))}
+        <div>
+            <h2 className={styles.title}>
+                Recipe which includes: <span>{title}</span>
+            </h2>
+            <div className={styles.cards}>
+                {recipes.map((recipe) => (
+                    <RecipeCard key={recipe.id} recipe={recipe} />
+                ))}
+            </div>
         </div>
     );
 };

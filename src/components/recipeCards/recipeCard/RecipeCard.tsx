@@ -12,6 +12,7 @@ interface RecipeCardProps {
 const RecipeCard: FC<RecipeCardProps> = ({ recipe }) => {
     return (
         <div className={styles.card}>
+            <img src={recipe.image} alt={recipe.title} />
             <Link to={`/instruction/${recipe.id}`}>
                 <span className={styles.caption}>{recipe.title}</span>
             </Link>
