@@ -3,50 +3,36 @@ import { FC } from 'react';
 import Search from 'components/search/Search';
 import RecipeSplideCards from 'components/recipeSplideCards/RecipeSplideCards';
 
-import {
-    useGetPopularByTagQuery,
-    useGetPopularQuery,
-} from 'services/FoodService';
+import { useGetPopularByTagQuery } from 'services/FoodService';
+import { capitalize } from 'helpers/capitalize';
+
+const tags = ['', 'dessert', 'vegetarian', 'vegan', 'ketogenic', 'snack'];
+const RenderRecipeSplideCards = (tag: string) => {
+    const { data, isLoading, isError } = useGetPopularByTagQuery(tag);
+
+    if (isLoading) {
+        return <div key={tag}>Loading...</div>;
+    }
+
+    if (isError || !data) {
+        return <div key={tag}>Occurred error</div>;
+    }
+
+    return (
+        <RecipeSplideCards
+            key={tag}
+            title={tag ? capitalize(tag) : 'Most popular'}
+            recipes={data.recipes}
+            countPage={4}
+        />
+    );
+};
 
 const Home: FC = () => {
-    const popularRecipes = useGetPopularQuery();
-    const dessertRecipes = useGetPopularByTagQuery('dessert');
-    const veggyRecipes = useGetPopularByTagQuery('vegetarian');
-
-    const hasDataAndNoError =
-        popularRecipes.data &&
-        dessertRecipes.data &&
-        veggyRecipes.data &&
-        !popularRecipes.isError &&
-        !veggyRecipes.isError &&
-        !dessertRecipes.isError;
-
     return (
         <div className="container">
             <Search />
-            {popularRecipes.isLoading ? (
-                <div>Loading...</div>
-            ) : hasDataAndNoError ? (
-                <>
-                    <RecipeSplideCards
-                        title="Most popular"
-                        recipes={popularRecipes.data.recipes}
-                        countPage={3}
-                    />
-                    <RecipeSplideCards
-                        title="Dessert"
-                        recipes={dessertRecipes.data.recipes}
-                        countPage={4}
-                    />
-                    <RecipeSplideCards
-                        title="Vegetarian"
-                        recipes={veggyRecipes.data.recipes}
-                        countPage={4}
-                    />
-                </>
-            ) : (
-                <div>Occured error</div>
-            )}
+            {tags.map((tag) => RenderRecipeSplideCards(tag))}
         </div>
     );
 };

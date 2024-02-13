@@ -7,7 +7,7 @@
     z-index: 1;
 }
 
-img {
+.recipe_img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -33,20 +33,31 @@ img {
     height: 70%;
 }
 
-.card:hover img {
+.card:hover .recipe_img {
     transform: scale(1.1);
 }
 
-.caption {
+.caption_wrap {
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 3;
     color: var(--most-light);
     padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.caption_wrap img {
+    width: 15px;
+    height: 15px;
+}
+
+.caption {
     transition: color 0.3s ease-in;
 }
 
 .caption:hover {
-    color: var(--calm-light);
+    color: #9ed181;
 }

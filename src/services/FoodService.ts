@@ -8,10 +8,6 @@ export const foodApi = createApi({
         baseUrl: 'https://api.spoonacular.com/recipes/',
     }),
     endpoints: (builder) => ({
-        getPopular: builder.query<IRecipeApi, void>({
-            query: () =>
-                `/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`,
-        }),
         getPopularByTag: builder.query<IRecipeApi, string>({
             query: (tagName) =>
                 `/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&include-tags=${tagName}`,
@@ -32,7 +28,6 @@ export const foodApi = createApi({
 });
 
 export const {
-    useGetPopularQuery,
     useGetPopularByTagQuery,
     useGetRecipeInfoQuery,
     useGetRecipesByIngredientsQuery,
