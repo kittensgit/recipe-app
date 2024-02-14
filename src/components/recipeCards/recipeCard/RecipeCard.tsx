@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import { IRecipe } from 'types/receipe/receipe';
+import { IRecipe, ISeacrhRecipe } from 'types/receipe/receipe';
 
 import styles from './RecipeCard.module.css';
 
 interface RecipeCardProps {
-    recipe: IRecipe;
+    recipe: IRecipe | ISeacrhRecipe;
 }
 
 const RecipeCard: FC<RecipeCardProps> = ({ recipe }) => {

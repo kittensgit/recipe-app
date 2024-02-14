@@ -1,12 +1,13 @@
 import { FC } from 'react';
-import { IRecipe } from 'types/receipe/receipe';
+import { IRecipe, ISeacrhRecipe } from 'types/receipe/receipe';
+
+import RecipeCard from './recipeCard/RecipeCard';
 
 import styles from './RecipeCards.module.css';
-import RecipeCard from './recipeCard/RecipeCard';
 
 interface RecipeCardsProps {
     title?: string;
-    recipes: IRecipe[];
+    recipes: IRecipe[] | ISeacrhRecipe[];
 }
 
 const RecipeCards: FC<RecipeCardsProps> = ({ recipes, title }) => {

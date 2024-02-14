@@ -17,8 +17,18 @@ export interface IRecipe {
     extendedIngredients: IIngredient[];
 }
 
+export interface ISeacrhRecipe {
+    id: number;
+    title: string;
+    image: string;
+}
+
 export interface IRecipeApi {
     recipes: IRecipe[];
+}
+
+export interface ISearchRecipeApi {
+    results: ISeacrhRecipe[];
 }
 
 export interface ICuisineApi {

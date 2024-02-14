@@ -7,6 +7,16 @@ import { useGetPopularByTagQuery } from 'services/FoodService';
 import { capitalize } from 'helpers/capitalize';
 
 const tags = ['', 'dessert', 'vegetarian', 'vegan', 'ketogenic', 'snack'];
+
+const Home: FC = () => {
+    return (
+        <div className="container">
+            <Search />
+            {tags.map((tag) => RenderRecipeSplideCards(tag))}
+        </div>
+    );
+};
+
 const RenderRecipeSplideCards = (tag: string) => {
     const { data, isLoading, isError } = useGetPopularByTagQuery(tag);
 
@@ -25,15 +35,6 @@ const RenderRecipeSplideCards = (tag: string) => {
             recipes={data.recipes}
             countPage={4}
         />
-    );
-};
-
-const Home: FC = () => {
-    return (
-        <div className="container">
-            <Search />
-            {tags.map((tag) => RenderRecipeSplideCards(tag))}
-        </div>
     );
 };
 

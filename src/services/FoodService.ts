@@ -1,6 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-import { ICuisineApi, IRecipe, IRecipeApi } from 'types/receipe/receipe';
+import {
+    ICuisineApi,
+    IRecipe,
+    IRecipeApi,
+    ISearchRecipeApi,
+} from 'types/receipe/receipe';
 
 export const foodApi = createApi({
     reducerPath: 'foodApi',
@@ -24,6 +29,10 @@ export const foodApi = createApi({
             query: (cuisineType) =>
                 `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisineType}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
+        getRecipesBySeacrh: builder.query<ISearchRecipeApi, string>({
+            query: (searchQuery) =>
+                `https://api.spoonacular.com/recipes/complexSearch?query=${searchQuery}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
+        }),
     }),
 });
 
@@ -32,4 +41,5 @@ export const {
     useGetRecipeInfoQuery,
     useGetRecipesByIngredientsQuery,
     useGetRecipesByCuisineQuery,
+    useGetRecipesBySeacrhQuery,
 } = foodApi;

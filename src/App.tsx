@@ -7,6 +7,7 @@ import Home from 'pages/Home';
 import Cuisine from 'pages/Cuisine';
 import RecipeInstruction from 'pages/RecipeInstruction';
 import RecipesByIngredient from 'pages/RecipesByIngredient';
+import Searched from 'pages/Searched';
 
 const App: FC = () => {
     return (
@@ -22,6 +23,10 @@ const App: FC = () => {
                 <Route
                     path="/recipes/findByIngredients/:ingredient"
                     element={<RecipesByIngredient />}
+                />
+                <Route
+                    path="/recipes/searched/:searchQuery"
+                    element={<Searched />}
                 />
             </Routes>
         </div>
