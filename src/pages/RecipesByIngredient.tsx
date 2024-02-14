@@ -1,6 +1,7 @@
-import RecipeCards from 'components/recipeCards/RecipeCards';
 import { FC } from 'react';
 import { useParams } from 'react-router-dom';
+
+import RecipeCards from 'components/recipeCards/RecipeCards';
 
 import { useGetRecipesByIngredientsQuery } from 'services/FoodService';
 

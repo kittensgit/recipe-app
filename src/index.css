@@ -101,9 +101,11 @@ a:focus {
     box-sizing: border-box;
 }
 
-/* colors vars */
+/* fonts and colors vars */
 
 :root {
+    --open-sans: 'Open Sans', sans-serif;
+    --protest-riot: 'Protest Riot', sans-serif;
     --most-light: #e1f0da;
     --calm-light: #d4e7c5;
     --medium-light: #99bc85;
@@ -115,7 +117,7 @@ a:focus {
 body {
     background-color: var(--most-light);
     color: var(--dark);
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--open-sans);
     font-weight: 400;
     font-size: 16px;
 }

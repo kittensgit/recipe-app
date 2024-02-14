@@ -9,6 +9,18 @@
     justify-content: space-between;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #609966;
+    font-family: var(--protest-riot);
+}
+
+.logo strong {
+    font-size: 24px;
+}
+
 .category_list {
     display: flex;
     gap: 20px;

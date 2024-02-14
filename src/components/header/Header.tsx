@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 import { Link } from 'react-router-dom';
 
 import chefIcon from 'assets/chef.png';
@@ -12,7 +11,10 @@ const Header: FC = () => {
             <div className="container">
                 <div className={styles.header_wrap}>
                     <Link to="/">
-                        <img src={chefIcon} alt="logo" />
+                        <div className={styles.logo}>
+                            <img src={chefIcon} alt="logo" />
+                            <strong>Delecious</strong>
+                        </div>
                     </Link>
                     <ul className={styles.category_list}>
                         <li>

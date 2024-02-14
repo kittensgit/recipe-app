@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 
 import RecipeCards from 'components/recipeCards/RecipeCards';
+
 import { useGetRecipesByCuisineQuery } from 'services/FoodService';
 
 const Cuisine: FC = () => {

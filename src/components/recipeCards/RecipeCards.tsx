@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { IRecipe, ISeacrhRecipe } from 'types/receipe/receipe';
 
 import RecipeCard from './recipeCard/RecipeCard';
