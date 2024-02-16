@@ -24,3 +24,9 @@ input:focus {
     border-color: #609966;
     box-shadow: 0 0 5px #2e5d33;
 }
+
+@media (max-width: 450px) {
+    input {
+        min-width: 320px;
+    }
+}

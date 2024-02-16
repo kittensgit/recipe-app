@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import chefIcon from 'assets/chef.png';
+import burgerMenuIcon from 'assets/menu.png';
 
 import styles from './Header.module.css';
 
@@ -16,6 +17,9 @@ const Header: FC = () => {
                             <strong>Delecious</strong>
                         </div>
                     </Link>
+                    <div className={styles.menu}>
+                        <img src={burgerMenuIcon} alt="menu" />
+                    </div>
                     <ul className={styles.category_list}>
                         <li>
                             <Link to={'/cuisine/chinese'}>Chinese</Link>

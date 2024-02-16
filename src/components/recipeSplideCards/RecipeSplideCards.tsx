@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
@@ -19,14 +19,36 @@ const RecipeSplideCards: FC<RecipeSplideCardsProps> = ({
     recipes,
     countPage,
 }) => {
+    const [perPage, setPerPage] = useState(countPage);
+
+    useEffect(() => {
+        const updatePerPage = () => {
+            const newPerPage =
+                window.innerWidth < 500
+                    ? 1
+                    : window.innerWidth < 760
+                    ? 2
+                    : window.innerWidth < 900
+                    ? 3
+                    : countPage;
+
+            setPerPage(newPerPage);
+        };
+        updatePerPage();
+        window.addEventListener('resize', updatePerPage);
+        return () => {
+            window.removeEventListener('resize', updatePerPage);
+        };
+    }, [countPage]);
+
     return (
         <div className={styles.wrapper}>
             {title && <h2 className={styles.title}>{title}</h2>}
             <Splide
                 options={{
                     rewind: true,
-                    perPage: countPage,
-                    perMove: countPage,
+                    perPage: perPage,
+                    perMove: perPage,
                     arrows: false,
                     pagination: false,
                     drag: 'free',
