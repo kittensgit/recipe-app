@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { IRecipe, ISeacrhRecipe } from 'types/receipe/receipe';
+import { capitalize } from 'helpers/capitalize';
 
 import RecipeCard from './recipeCard/RecipeCard';
 
@@ -14,7 +15,7 @@ interface RecipeCardsProps {
 const RecipeCards: FC<RecipeCardsProps> = ({ recipes, title }) => {
     return (
         <div>
-            <h2 className={styles.title}>{title}</h2>
+            <h2 className={styles.title}>{capitalize(title!)}</h2>
             <div className={styles.cards}>
                 {recipes.map((recipe) => (
                     <RecipeCard key={recipe.id} recipe={recipe} />
