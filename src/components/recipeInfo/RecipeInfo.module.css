@@ -18,6 +18,8 @@
 .info img {
     max-width: 600px;
     align-self: center;
+    margin: 0 10px;
+    object-fit: cover;
 }
 
 .instruction {
@@ -54,6 +56,7 @@
 
 .original_list li {
     border-bottom: 1px dashed var(--middle);
+    margin: 0 0 5px 0;
 }
 
 .about {
@@ -63,4 +66,33 @@
 .about h3 {
     font-weight: 700;
     font-size: 24px;
+}
+
+@media (max-width: 1050px) {
+    .info {
+        flex-direction: column;
+    }
+    .title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 30px;
+    }
+    .info img {
+        width: 100%;
+    }
+    .name_list li {
+        padding: 4px;
+    }
+}
+@media (max-width: 470px) {
+    .title {
+        font-size: 28px;
+    }
+    .original_list {
+        columns: 1;
+    }
 }
