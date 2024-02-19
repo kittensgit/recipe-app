@@ -12,7 +12,7 @@ const Home: FC = () => {
     return (
         <div className="container">
             <Search />
-            {tags.map((tag) => RenderRecipeSplideCards(tag))}
+            {/* {tags.map((tag) => RenderRecipeSplideCards(tag))} */}
         </div>
     );
 };
