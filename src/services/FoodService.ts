@@ -19,19 +19,19 @@ export const foodApi = createApi({
         }),
         getRecipeInfo: builder.query<IRecipe, string>({
             query: (recipeId) =>
-                `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_API_KEY}`,
+                `/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
         getRecipesByIngredients: builder.query<IRecipe[], string>({
             query: (ingredient) =>
-                `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
+                `/recipes/findByIngredients?ingredients=${ingredient}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
         getRecipesByCuisine: builder.query<ICuisineApi, string>({
             query: (cuisineType) =>
-                `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisineType}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
+                `/recipes/complexSearch?cuisine=${cuisineType}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
         getRecipesBySeacrh: builder.query<ISearchRecipeApi, string>({
             query: (searchQuery) =>
-                `https://api.spoonacular.com/recipes/complexSearch?query=${searchQuery}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
+                `/recipes/complexSearch?query=${searchQuery}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
     }),
 });

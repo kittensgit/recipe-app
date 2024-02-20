@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Loading from 'components/loading/Loading';
+import Error from 'components/error/Error';
 import RecipeInfo from 'components/recipeInfo/RecipeInfo';
 
 import { useGetRecipeInfoQuery } from 'services/FoodService';
@@ -20,7 +21,7 @@ const RecipeInstruction: FC = () => {
             ) : hasDataAndNoError ? (
                 <RecipeInfo recipeInstruction={data} />
             ) : (
-                <div>Error</div>
+                <Error />
             )}
         </div>
     );

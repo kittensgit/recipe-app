@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 
-import RecipeCards from 'components/recipeCards/RecipeCards';
 import Loading from 'components/loading/Loading';
+import Error from 'components/error/Error';
+import RecipeCards from 'components/recipeCards/RecipeCards';
 
 import { useGetRecipesByIngredientsQuery } from 'services/FoodService';
 
@@ -21,7 +22,7 @@ const RecipesByIngredient: FC = () => {
             ) : hasDataAndNoError ? (
                 <RecipeCards recipes={data} title={ingredient} />
             ) : (
-                <div>Error</div>
+                <Error />
             )}
         </div>
     );

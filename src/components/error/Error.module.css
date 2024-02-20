@@ -1,0 +1,22 @@
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+}
+
+.caption {
+    font-weight: 800;
+    color: var(--middle);
+    font-size: 24px;
+}
+
+@media (max-width: 530px) {
+    .error img {
+        width: 75px;
+    }
+    .caption {
+        font-size: 20px;
+    }
+}

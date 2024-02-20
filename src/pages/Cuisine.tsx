@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Loading from 'components/loading/Loading';
+import Error from 'components/error/Error';
 import RecipeCards from 'components/recipeCards/RecipeCards';
 
 import { useGetRecipesByCuisineQuery } from 'services/FoodService';
@@ -24,7 +25,7 @@ const Cuisine: FC = () => {
                     title={`${cuisineType} cuisine`}
                 />
             ) : (
-                <div>Error</div>
+                <Error />
             )}
         </div>
     );

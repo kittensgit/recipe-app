@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
+import Loading from 'components/loading/Loading';
+import Error from 'components/error/Error';
 import Search from 'components/search/Search';
 import RecipeSplideCards from 'components/recipeSplideCards/RecipeSplideCards';
-import Loading from 'components/loading/Loading';
 
 import { useGetPopularByTagQuery } from 'services/FoodService';
 import { capitalize } from 'helpers/capitalize';
@@ -26,7 +27,7 @@ const RenderRecipeSplideCards = (tag: string) => {
     }
 
     if (isError || !data) {
-        return <div key={tag}>Occurred error</div>;
+        return <Error key={tag} />;
     }
 
     return (
