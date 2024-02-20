@@ -19,19 +19,19 @@ export const foodApi = createApi({
         }),
         getRecipeInfo: builder.query<IRecipe, string>({
             query: (recipeId) =>
-                `/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_API_KEY}`,
+                `/${recipeId}/information?apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
         getRecipesByIngredients: builder.query<IRecipe[], string>({
             query: (ingredient) =>
-                `/recipes/findByIngredients?ingredients=${ingredient}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
+                `/findByIngredients?ingredients=${ingredient}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
         getRecipesByCuisine: builder.query<ICuisineApi, string>({
             query: (cuisineType) =>
-                `/recipes/complexSearch?cuisine=${cuisineType}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
+                `/complexSearch?cuisine=${cuisineType}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
         getRecipesBySeacrh: builder.query<ISearchRecipeApi, string>({
             query: (searchQuery) =>
-                `/recipes/complexSearch?query=${searchQuery}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
+                `/complexSearch?query=${searchQuery}&number=25&apiKey=${process.env.REACT_APP_API_KEY}`,
         }),
     }),
 });

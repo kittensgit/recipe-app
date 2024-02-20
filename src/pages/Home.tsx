@@ -8,7 +8,17 @@ import RecipeSplideCards from 'components/recipeSplideCards/RecipeSplideCards';
 import { useGetPopularByTagQuery } from 'services/FoodService';
 import { capitalize } from 'helpers/capitalize';
 
-const tags = ['', 'dessert', 'vegetarian', 'vegan', 'ketogenic', 'snack'];
+const tags = [
+    '',
+    'dessert',
+    'vegetarian',
+    'vegan',
+    'ketogenic',
+    'nut_free',
+    'wheat_free',
+    'gluten_free',
+    'no_added_sugar',
+];
 
 const Home: FC = () => {
     return (
@@ -33,7 +43,7 @@ const RenderRecipeSplideCards = (tag: string) => {
     return (
         <RecipeSplideCards
             key={tag}
-            title={tag ? capitalize(tag) : 'Most popular'}
+            title={tag ? capitalize(tag).split('_').join(' ') : 'Most popular'}
             recipes={data.recipes}
             countPage={4}
         />

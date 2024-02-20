@@ -15,29 +15,31 @@ import Footer from 'components/footer/Footer';
 
 const App: FC = () => {
     return (
-        <div>
+        <div className="app">
             <Header />
-            <Suspense fallback={<Loading />}>
-                <Routes>
-                    <Route path="/" element={<LazyHomePage />} />
-                    <Route
-                        path="/cuisine/:cuisineType"
-                        element={<LazyCuisinePage />}
-                    />
-                    <Route
-                        path="/instruction/:recipeId"
-                        element={<LazyRecipeInstructionPage />}
-                    />
-                    <Route
-                        path="/recipes/findByIngredients/:ingredient"
-                        element={<LazyRecipesByIngredientPage />}
-                    />
-                    <Route
-                        path="/recipes/searched/:searchQuery"
-                        element={<LazySearchedPage />}
-                    />
-                </Routes>
-            </Suspense>
+            <div className="main_wrapp">
+                <Suspense fallback={<Loading />}>
+                    <Routes>
+                        <Route path="/" element={<LazyHomePage />} />
+                        <Route
+                            path="/cuisine/:cuisineType"
+                            element={<LazyCuisinePage />}
+                        />
+                        <Route
+                            path="/instruction/:recipeId"
+                            element={<LazyRecipeInstructionPage />}
+                        />
+                        <Route
+                            path="/recipes/findByIngredients/:ingredient"
+                            element={<LazyRecipesByIngredientPage />}
+                        />
+                        <Route
+                            path="/recipes/searched/:searchQuery"
+                            element={<LazySearchedPage />}
+                        />
+                    </Routes>
+                </Suspense>
+            </div>
             <Footer />
         </div>
     );

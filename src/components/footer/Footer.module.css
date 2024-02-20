@@ -3,6 +3,8 @@
 }
 
 .footer_wrapp {
+    display: flex;
+    justify-content: space-between;
     padding: 30px;
 }
 
@@ -13,8 +15,24 @@
     font-family: var(--protest-riot);
 }
 
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socials li img {
+    width: 30px;
+}
+
 @media (max-width: 550px) {
     .footer_wrapp strong {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .socials {
+        gap: 6px;
     }
 }
