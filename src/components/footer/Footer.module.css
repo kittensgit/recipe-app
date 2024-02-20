@@ -5,7 +5,7 @@
 .footer_wrapp {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 15px;
 }
 
 .footer_wrapp strong {
@@ -25,6 +25,12 @@
     width: 30px;
 }
 
+@media (max-width: 1050px) {
+    .footer_wrapp {
+        padding: 10px 25px;
+    }
+}
+
 @media (max-width: 550px) {
     .footer_wrapp strong {
         font-size: 28px;
@@ -32,7 +38,13 @@
 }
 
 @media (max-width: 400px) {
+    .footer_wrapp strong {
+        font-size: 26px;
+    }
     .socials {
         gap: 6px;
+    }
+    .socials li img {
+        width: 25px;
     }
 }
