@@ -1,0 +1,20 @@
+.footer {
+    background-color: var(--calm-light);
+}
+
+.footer_wrapp {
+    padding: 30px;
+}
+
+.footer_wrapp strong {
+    font-weight: 800;
+    font-size: 32px;
+    color: var(--middle);
+    font-family: var(--protest-riot);
+}
+
+@media (max-width: 550px) {
+    .footer_wrapp strong {
+        font-size: 28px;
+    }
+}

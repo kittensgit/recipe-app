@@ -11,6 +11,7 @@ import {
     LazyRecipesByIngredientPage,
     LazySearchedPage,
 } from 'lazy/Lazy';
+import Footer from 'components/footer/Footer';
 
 const App: FC = () => {
     return (
@@ -37,6 +38,7 @@ const App: FC = () => {
                     />
                 </Routes>
             </Suspense>
+            <Footer />
         </div>
     );
 };
