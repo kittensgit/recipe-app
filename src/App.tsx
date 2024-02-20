@@ -1,8 +1,9 @@
 import { FC, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Header from 'components/header/Header';
 import Loading from 'components/loading/Loading';
+import Header from 'components/header/Header';
+import Footer from 'components/footer/Footer';
 
 import {
     LazyCuisinePage,
@@ -11,7 +12,7 @@ import {
     LazyRecipesByIngredientPage,
     LazySearchedPage,
 } from 'lazy/Lazy';
-import Footer from 'components/footer/Footer';
+import NotFound from 'components/notfound/NotFound';
 
 const App: FC = () => {
     return (
@@ -21,6 +22,7 @@ const App: FC = () => {
                 <Suspense fallback={<Loading />}>
                     <Routes>
                         <Route path="/" element={<LazyHomePage />} />
+                        <Route path="/recipes" element={<LazyHomePage />} />
                         <Route
                             path="/cuisine/:cuisineType"
                             element={<LazyCuisinePage />}
@@ -37,6 +39,7 @@ const App: FC = () => {
                             path="/recipes/searched/:searchQuery"
                             element={<LazySearchedPage />}
                         />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </Suspense>
             </div>

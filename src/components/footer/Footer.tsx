@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import instIcon from 'assets/inst.png';
 import telegIcon from 'assets/tel.png';
@@ -12,7 +13,9 @@ const Footer: FC = () => {
         <div className={styles.footer}>
             <div className="container">
                 <div className={styles.footer_wrapp}>
-                    <strong>Delecious</strong>
+                    <Link to={'/'}>
+                        <strong>Delecious</strong>
+                    </Link>
                     <ul className={styles.socials}>
                         <li>
                             <a
