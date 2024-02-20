@@ -22,7 +22,7 @@ const App: FC = () => {
                 <Suspense fallback={<Loading />}>
                     <Routes>
                         <Route path="/" element={<LazyHomePage />} />
-                        <Route path="/recipes" element={<LazyHomePage />} />
+                        <Route path="/recipe-app" element={<LazyHomePage />} />
                         <Route
                             path="/cuisine/:cuisineType"
                             element={<LazyCuisinePage />}

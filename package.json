@@ -2,7 +2,7 @@
     "name": "recipe-app",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://kittensgit.github.io/recipes",
+    "homepage": "https://kittensgit.github.io/recipe-app/",
     "dependencies": {
         "@reduxjs/toolkit": "^2.1.0",
         "@splidejs/react-splide": "^0.7.12",

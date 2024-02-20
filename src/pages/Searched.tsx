@@ -18,11 +18,13 @@ const Searched: FC = () => {
     const hasDataAndNoError = data && !isError;
     return (
         <div className="container">
-            <Search />
             {isLoading ? (
                 <Loading />
             ) : hasDataAndNoError ? (
-                <RecipeCards recipes={data.results} title={searchQuery} />
+                <>
+                    <Search />
+                    <RecipeCards recipes={data.results} title={searchQuery} />
+                </>
             ) : (
                 <Error />
             )}
