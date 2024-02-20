@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import Search from 'components/search/Search';
 import RecipeSplideCards from 'components/recipeSplideCards/RecipeSplideCards';
+import Loading from 'components/loading/Loading';
 
 import { useGetPopularByTagQuery } from 'services/FoodService';
 import { capitalize } from 'helpers/capitalize';
@@ -21,7 +22,7 @@ const RenderRecipeSplideCards = (tag: string) => {
     const { data, isLoading, isError } = useGetPopularByTagQuery(tag);
 
     if (isLoading) {
-        return <div key={tag}>Loading...</div>;
+        return <Loading key={tag} />;
     }
 
     if (isError || !data) {

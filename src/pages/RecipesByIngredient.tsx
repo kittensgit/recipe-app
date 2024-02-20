@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 
 import RecipeCards from 'components/recipeCards/RecipeCards';
+import Loading from 'components/loading/Loading';
 
 import { useGetRecipesByIngredientsQuery } from 'services/FoodService';
 
@@ -16,7 +17,7 @@ const RecipesByIngredient: FC = () => {
     return (
         <div className="container">
             {isLoading ? (
-                <div>Loading...</div>
+                <Loading />
             ) : hasDataAndNoError ? (
                 <RecipeCards recipes={data} title={ingredient} />
             ) : (

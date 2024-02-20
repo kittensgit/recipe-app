@@ -1,6 +1,8 @@
-import RecipeInfo from 'components/recipeInfo/RecipeInfo';
 import { FC } from 'react';
 import { useParams } from 'react-router-dom';
+
+import Loading from 'components/loading/Loading';
+import RecipeInfo from 'components/recipeInfo/RecipeInfo';
 
 import { useGetRecipeInfoQuery } from 'services/FoodService';
 
@@ -14,7 +16,7 @@ const RecipeInstruction: FC = () => {
     return (
         <div className="container">
             {isLoading ? (
-                <div>Loading...</div>
+                <Loading />
             ) : hasDataAndNoError ? (
                 <RecipeInfo recipeInstruction={data} />
             ) : (

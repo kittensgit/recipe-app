@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 
+import Loading from 'components/loading/Loading';
 import RecipeCards from 'components/recipeCards/RecipeCards';
 import Search from 'components/search/Search';
 
@@ -18,9 +19,9 @@ const Searched: FC = () => {
         <div className="container">
             <Search />
             {isLoading ? (
-                <div>Loading...</div>
+                <Loading />
             ) : hasDataAndNoError ? (
-                <RecipeCards recipes={data.results} />
+                <RecipeCards recipes={data.results} title={searchQuery} />
             ) : (
                 <div>Occured an error</div>
             )}

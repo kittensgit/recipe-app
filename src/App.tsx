@@ -2,6 +2,7 @@ import { FC, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Header from 'components/header/Header';
+import Loading from 'components/loading/Loading';
 
 import {
     LazyCuisinePage,
@@ -15,7 +16,7 @@ const App: FC = () => {
     return (
         <div>
             <Header />
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
                 <Routes>
                     <Route path="/" element={<LazyHomePage />} />
                     <Route
