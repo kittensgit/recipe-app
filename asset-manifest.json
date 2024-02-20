@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/recipe-app/static/css/main.c05608f5.css",
-    "main.js": "/recipe-app/static/js/main.bc3e5e39.js",
+    "main.js": "/recipe-app/static/js/main.a5c06513.js",
     "static/css/948.b0c89f81.chunk.css": "/recipe-app/static/css/948.b0c89f81.chunk.css",
     "static/js/948.ccf50ddb.chunk.js": "/recipe-app/static/js/948.ccf50ddb.chunk.js",
     "static/css/892.1f4fec86.chunk.css": "/recipe-app/static/css/892.1f4fec86.chunk.css",
@@ -11,11 +11,11 @@
     "static/css/252.1f4fec86.chunk.css": "/recipe-app/static/css/252.1f4fec86.chunk.css",
     "static/js/252.f07d1d12.chunk.js": "/recipe-app/static/js/252.f07d1d12.chunk.js",
     "static/css/888.7836d99f.chunk.css": "/recipe-app/static/css/888.7836d99f.chunk.css",
-    "static/js/888.61db6f1d.chunk.js": "/recipe-app/static/js/888.61db6f1d.chunk.js",
+    "static/js/888.d8aebb9c.chunk.js": "/recipe-app/static/js/888.d8aebb9c.chunk.js",
     "static/js/179.2028b89c.chunk.js": "/recipe-app/static/js/179.2028b89c.chunk.js",
     "index.html": "/recipe-app/index.html",
     "main.c05608f5.css.map": "/recipe-app/static/css/main.c05608f5.css.map",
-    "main.bc3e5e39.js.map": "/recipe-app/static/js/main.bc3e5e39.js.map",
+    "main.a5c06513.js.map": "/recipe-app/static/js/main.a5c06513.js.map",
     "948.b0c89f81.chunk.css.map": "/recipe-app/static/css/948.b0c89f81.chunk.css.map",
     "948.ccf50ddb.chunk.js.map": "/recipe-app/static/js/948.ccf50ddb.chunk.js.map",
     "892.1f4fec86.chunk.css.map": "/recipe-app/static/css/892.1f4fec86.chunk.css.map",
@@ -25,11 +25,11 @@
     "252.1f4fec86.chunk.css.map": "/recipe-app/static/css/252.1f4fec86.chunk.css.map",
     "252.f07d1d12.chunk.js.map": "/recipe-app/static/js/252.f07d1d12.chunk.js.map",
     "888.7836d99f.chunk.css.map": "/recipe-app/static/css/888.7836d99f.chunk.css.map",
-    "888.61db6f1d.chunk.js.map": "/recipe-app/static/js/888.61db6f1d.chunk.js.map",
+    "888.d8aebb9c.chunk.js.map": "/recipe-app/static/js/888.d8aebb9c.chunk.js.map",
     "179.2028b89c.chunk.js.map": "/recipe-app/static/js/179.2028b89c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c05608f5.css",
-    "static/js/main.bc3e5e39.js"
+    "static/js/main.a5c06513.js"
   ]
 }
