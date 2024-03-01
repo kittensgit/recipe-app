@@ -1,6 +1,6 @@
 .card {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 15px;
     background-color: var(--pre-middle);
     overflow: hidden;
@@ -43,15 +43,35 @@
     bottom: 0;
     left: 0;
     z-index: 3;
-    color: var(--most-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 15px;
+    color: var(--most-light);
     transition: color 0.3s ease-in;
 }
 
-.caption:hover {
+.caption img {
+    width: 15px;
+    height: 15px;
+}
+
+.caption span:hover {
     color: var(--calm-light);
 }
 
+@media (max-width: 1000px) {
+    .card {
+        width: 220px;
+        height: 220px;
+    }
+}
+@media (max-width: 720px) {
+    .card {
+        width: 200px;
+        height: 200px;
+    }
+}
 @media (max-width: 653px) {
     .card {
         width: 100%;

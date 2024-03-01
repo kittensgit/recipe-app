@@ -45,7 +45,7 @@ const RenderRecipeSplideCards = (tag: string) => {
             key={tag}
             title={tag ? capitalize(tag).split('_').join(' ') : 'Most popular'}
             recipes={data.recipes}
-            countPage={4}
+            countPage={tag ? 4 : 3}
         />
     );
 };
